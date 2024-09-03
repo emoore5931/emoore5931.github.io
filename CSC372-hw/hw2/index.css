@@ -1,0 +1,91 @@
+:root {
+    --primary-color: white;
+    --secondary-color: #a4a400;
+    --tertiary-color: #f0f0f0;
+}
+
+body {
+    font-size: 11pt;
+    font-family: Georgia, Garamond, serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--secondary-color);
+    background-color: var(--tertiary-color);
+    text-decoration: double;
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, serif;
+}
+
+button:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+button > a {
+    text-decoration: none;
+}
+
+#card-container {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 6px;
+    padding: 20px;
+    box-shadow: 5px 10px grey;
+    overflow: auto;
+    height: 900px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 250px;
+    padding: 2px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--tertiary-color);
+    border-width: 2.5px;
+}
+
+.recipe-card > * {
+    display: block;
+}
+
+.recipe-card > img {
+    width: 100%;
+    height: 40%;
+}
+
+.recipe-card > h3 {
+    height: 10%;
+    width: 100%;
+}
+
+.recipe-card > p {
+    height: 35%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.recipe-card > button {
+    height: 15%;
+    width: 80%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2px;
+    border-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
+    margin: auto;
+}
