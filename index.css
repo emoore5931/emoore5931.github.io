@@ -1,0 +1,42 @@
+/*
+  Name: Ethan Moore 
+  Date: 09.05.2024
+  CSC 372-01
+
+  Style sheet for Github pages site.
+*/
+
+:root {
+    --background-color: #2b2b2bfb;
+    --primary-color: #ffffff;
+    --secondary-color: #c3c2c2;
+    --tertiary-color: #595959;
+}
+
+body {
+    width: 100vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+header {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: solid;
+    border-color: var(--tertiary-color);
+}
+
+header > h1 {
+    text-align: center;
+}
+
+#header-signature {
+    color: var(--secondary-color);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
