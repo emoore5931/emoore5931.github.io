@@ -1,0 +1,59 @@
+/*
+  Name: Ethan Moore 
+  Date: 09.05.2024
+  CSC 372-01
+
+  Style sheet for pie.html. All rules are to the specifications of the given instructions.
+*/
+
+:root {
+    --primary-color: white;
+    --secondary-color: #a4a400;
+    --tertiary-color: #f0f0f0;
+}
+
+body {
+    font-size: 11pt;
+    font-family: Georgia, Garamond, serif;
+    background: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--secondary-color);
+    background-color: var(--tertiary-color);
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, serif;
+    text-wrap: nowrap;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+h2, h3, h4, h5, h6 {
+    text-align: left;
+    font-size: 18pt;
+}
+
+a {
+    color: var(--secondary-color);
+}
+
+pre {
+    font-family: monospace;
+}
+
+ul {
+    list-style-image: url("./resources/pie_icon.gif");
+}
+
+.user-comment {
+    display: block;
+    font-style: italic;
+    background-color: #FFFFA8;
+    height: auto;
+    width: 80%;
+    margin: 10px 10%
+}

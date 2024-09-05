@@ -1,3 +1,11 @@
+/*
+  Name: Ethan Moore 
+  Date: 09.05.2024
+  CSC 372-01
+
+  Style sheet for index.html.
+*/
+
 :root {
     --primary-color: white;
     --secondary-color: #a4a400;
@@ -10,10 +18,16 @@ body {
 }
 
 main {
-    width: 100vw;
-    height: 100vh;
+    --main-padding: 10px;
+
+    width: calc(100vw - var(--main-padding));
+    height: calc(100vh - var(--main-padding));
     background-color: var(--primary-color);
-    padding: 10px;
+    padding: var(--main-padding);
+}
+
+h1 {
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,6 +35,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--tertiary-color);
     text-decoration: double;
     font-family: 'Lucida Sans Unicode', Helvetica, Arial, serif;
+    text-wrap: nowrap;
 }
 
 button:hover {
@@ -57,6 +72,7 @@ button > a {
     border-style: solid;
     border-color: var(--tertiary-color);
     border-width: 2.5px;
+    overflow: hidden;
 }
 
 .recipe-card > * {
@@ -66,6 +82,7 @@ button > a {
 .recipe-card > img {
     width: 100%;
     height: 40%;
+    object-fit: contain;
 }
 
 .recipe-card > h3 {
