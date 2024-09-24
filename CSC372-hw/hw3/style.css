@@ -145,3 +145,25 @@ h1 {
 .text-center {
     text-align: center;
 }
+
+/*Meal Plan Builder Styling*/
+#mealPlanMain {
+    display: flex;
+    flex-direction: row;
+}
+
+#featuredDishes {
+    flex: 1;
+}
+
+#mealPlan {
+    flex: 1;
+}
+
+.featured-dish {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}

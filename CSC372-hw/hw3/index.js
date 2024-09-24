@@ -1,3 +1,8 @@
+"use strict";
+
+document.getElementById("homeBttn").addEventListener("click", () => {window.location.href = "index.html"});
+document.getElementById("mealPlanBttn").addEventListener("click", () => {window.location.href = "meal-plan.html"});
+
 let asideSections = document.querySelectorAll("aside > section");
 let articleSections = document.querySelectorAll("article > section");
 

@@ -5,11 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Plan Builder</title>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="meal-plan.js"></script>
 </head>
 <body>
     <nav>
-        <button onclick="window.location.href = 'index.html'">Home</button>
-        <button onclick="window.location.href = 'meal-plan.html'">Meal Plan</button>
+        <button id="homeBttn">Home</button>
+        <button id="mealPlanBttn">Meal Plan</button>
     </nav>
+    <header>
+        <h1 class="text-center">Meal Plan Builder</h1>
+    </header>
+    <main id="mealPlanMain">
+        <div id="featuredDishes">
+            <h3 class="text-center">Featured Dishes</h3>
+            <div id="dishesContainer">
+                <div class="featured-dish">
+                    <p><span id="meal1Name">Meal One</span>: <span id="meal1Val">$10.00</span></p>
+                    <button onclick="addMeal(1)">Add</button>
+                </div>
+            </div>
+        </div>
+        <div id="mealPlan">
+            <h3 class="text-center">Meal Plan</h3>
+            <h4>Meals</h4>
+            <div id="meals"></div>
+            <div id="total">
+                <p><b>Total</b>: <span id="totalAmount">$00.00</span></p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
