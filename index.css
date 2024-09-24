@@ -88,6 +88,12 @@ header > h1 {
     text-align: center;
 }
 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .content-card {
     width: 800px;
     height: 600px;
