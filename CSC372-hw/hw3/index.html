@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!--
+  Name: Ethan Moore 
+  Date: 09.25.2024
+  CSC 372-01
+
+  This is the homepage for the Dine On Campus application for hw3.
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,35 +21,124 @@
     </nav>
     <header>
         <h1 class="text-center">Dine on Campus!</h1>
-        <p>Are you a culinary adventurer in search of the perfect meal on campus? Look no further! We've
-            curated a list of the most exceptional dishes that are sure to tantalize your taste buds. From fresh pizzas to
-            mouthwatering sushi, this list has got you covered. So, put on your foodie hat and let's dive into the delightful
-            world of flavors.</p>
+        <p>
+            Don't know where to eat after a long night of studying? New to campus? Too many options? Don't worry, this site
+            will only present you with the best places to dine at UNCG. Just click on one of the locations below to 
+            view more information and their best meals. You can even plan out your meal using our 
+            <a href="meal-plan.html">Meal Plan Builder</a>.
+        </p>
     </header>
     <h2 class="text-center">Delicious Spots</h2>
     <main>
         <article id="locationInfoSecs">
             <section>
                 <div class="desc-container">
-                    <p>Location 1 is located at XXX and operate from XX:XX - XX:XX. They specialize in serving XXX.</p>
+                    <p>
+                        Buffalo Wild Wings GO is located within the Elliot University Center's (EUC) food hall on campus.
+                        The location is a tightly-focused version of the popular Buffalo Wild Wings chain.
+                        Featuring some of the most popular dishes from the existing menu.
+                        The restraunt operates from 10:30 AM - 11:00 PM Mon-Fri and 6:00 PM - 10:00 PM Sun.
+                    </p>
                     <h4>Recomended Dishes</h4>
-                    <ul>
-                        <li>Dish 1</li>
-                        <li>Dish 2</li>
-                        <li>Dish 3</li>
-                    </ul>
+                    <!--Images and dish info sourced from https://www.buffalowildwings.com/menu/-->
+                    <div class="dish-img-gallery">
+                        <img id="loc1Dish1" alt="Wings" src="./images/BWW-Wings.avif"/>
+                        <img id="loc1Dish2" alt="Burger" src="./images/BWW-Burger.avif"/>
+                        <img id="loc1Dish3" alt="Wrap" src="./images/BWW-Wrap.avif"/>
+                    </div>
+                    <p id="loc1Dish1Desc" class="dish-desc">
+                        Bone-less/-in Wings<br>
+                        AUTHENTIC BUFFALO, NEW YORK-STYLE CHICKEN WINGS / HANDSPUN IN CHOICE OF SAUCE OR DRY RUB<br>
+                        Price: $10.49<br>
+                    </p>
+                    <p id="loc1Dish2Desc" class="dish-desc">
+                        Mushroom Swiss Burger<br>
+                        HAND-SMASHED DOUBLE PATTY / SWISS CHEESE / PARMESAN GARLIC SAUCE / GRILLED MUSHROOMS / GRILLED ONIONS / MAYO / HONEY MUSTARD / CHALLAH BUN<br>
+                        Price: $13.49<br>
+                    </p>
+                    <p id="loc1Dish3Desc" class="dish-desc">
+                        Buffalo Ranch Chicken Wrap<br>
+                        BONELESS CHICKEN / MEDIUM BUFFALO SAUCE / RANCH / CHEDDAR-JACK CHEESE / SHREDDED ICEBERG LETTUCE / TOMATOES / FLOUR TORTILLA / HOUSE-MADE TORTILLA CHIPS & SALSA<br>
+                        Price: $11.49<br>
+                    </p>
                 </div>
-                <div class="dish-img-gallery">
-                    <img alt="dish 1"/>
-                    <img alt="dish 2"/>
-                    <img alt="dish 3"/>
+            </section>
+            <section>
+                <div class="desc-container">
+                    <p>
+                        Chick-Fil-A is located within the Elliot University Center's (EUC) on campus.
+                        Everyone already knows and many adore Chick-Fil-A. They have a simple menu and every item on that menu is quality.
+                        Their chicken taste delicious and their deserts taste even better.
+                        The restraunt operates from 7:30 AM - 10:00 PM Mon-Fri and 10:00 AM - 6:00 PM Sat.
+                    </p>
+                    <h4>Recomended Dishes</h4>
+                    <!--Images and dish info sourced from https://www.chick-fil-a.com/menu-->
+                    <div class="dish-img-gallery">
+                        <img id="loc2Dish1" alt="CFA-Sandwich" src="./images/CFA-Sandwich.png"/>
+                        <img id="loc2Dish2" alt="CFA-Nuggets" src="./images/CFA-Nuggets.png"/>
+                        <img id="loc2Dish3" alt="CFA-Cookie" src="./images/CFA-Cookie.png"/>
+                    </div>
+                    <p id="loc2Dish1Desc" class="dish-desc">
+                        Chicken Sandwich<br>
+                        A boneless breast of chicken seasoned to perfection, freshly breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttery bun with dill pickle chips. <br>
+                        Price: $8.55<br>
+                    </p>
+                    <p id="loc2Dish2Desc" class="dish-desc">
+                        Chicken Nuggets<br>
+                        Bite-sized pieces of boneless chicken breast, seasoned to perfection, freshly breaded and pressure cooked in 100% refined peanut oil.<br>
+                        Price: $8.55<br>
+                    </p>
+                    <p id="loc2Dish3Desc" class="dish-desc">
+                        Chocolate Chunk Cookie<br>
+                        These cookies have both semi-sweet dark and milk chocolate chunks, along with wholesome oats for an old-fashioned touch.<br>
+                        Price: $1.65<br>
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div class="desc-container">
+                    <p>
+                        Pita Delite Express is located within the Elliot University Center's (EUC) food hall on campus.
+                        Pita Delite provides healthy and fresh Lebanese food, from Gyros to Kabobs.
+                        The restraunt operates from 10:30 AM - 6:00 PM Mon-Fri.
+                    </p>
+                    <h4>Recomended Dishes</h4>
+                    <!--Images and dish info sourced from https://www.pitadelite.com/menu-->
+                    <div class="dish-img-gallery">
+                        <img id="loc3Dish1" alt="PD-FajitaSub" src="./images/PD-FajitaSub.webp"/>
+                        <img id="loc3Dish2" alt="PD-SteakCheesePita" src="./images/PD-SteakCheesePita.webp"/>
+                        <img id="loc3Dish3" alt="PD-Gyro" src="./images/PD-Gyro.webp"/>
+                    </div>
+                    <p id="loc3Dish1Desc" class="dish-desc">
+                        Fajita Sub<br>
+                        Grilled chicken & onions or steak & onions, provolone cheese, lettuce, mayonnaise or hummus and fajita sauce.<br>
+                        Price: $9.50<br>
+                    </p>
+                    <p id="loc3Dish2Desc" class="dish-desc">
+                        Steak & Cheese Pita<br>
+                        Lettuce, onions, provolone, mayo, and dressing (mushrooms extra)<br>
+                        Price: $9.50<br>
+                    </p>
+                    <p id="loc3Dish3Desc" class="dish-desc">
+                        Gyro<br>
+                        (lamb and beef), lettuce, tomato, feta, with cucumber sauce.<br>
+                        Price: $9.50<br>
+                    </p>
                 </div>
             </section>
         </article>
         <aside id="locationLabels">
             <section>
-                <img alt="location image"/>
-                <h3 class="text-center">Location 1</h3>
+                <img alt="BWW Logo" src="./images/logo-BWW.jpg"/>
+                <h3 class="text-center">Buffalo Wild Wings GO</h3>
+            </section>
+            <section>
+                <img alt="CFA Logo" src="./images/ChickFila.jpg"/>
+                <h3 class="text-center">Chick-Fil-A</h3>
+            </section>
+            <section>
+                <img alt="PD Logo" src="./images/logo-PD.jpg"/>
+                <h3 class="text-center">Pita Delite Express</h3>
             </section>
         </aside>
     </main>

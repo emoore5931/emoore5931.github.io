@@ -1,3 +1,11 @@
+/*
+  Name: Ethan Moore 
+  Date: 09.25.2024
+  CSC 372-01
+
+  This is the stylesheet for all pages in hw3.
+*/
+
 :root {
     --primary-color: darkblue;
     --secondary-color: white;
@@ -89,6 +97,30 @@ article > section.extend {
     animation-duration: 1s;
 }
 
+.dish-desc {
+    display: none;
+}
+
+.dish-desc-display {
+    display: block !important;
+}
+
+.dish-img-gallery > img {
+    object-fit: scale-down;
+    max-width: 100px;
+}
+
+.dish-img-gallery > img.selected {
+    max-width: 300px;
+    width: 300px;
+}
+
+.dish-img-gallery > img:hover {
+    cursor: pointer;
+    transition: all 100ms;
+    transform: translateY(-5px);
+}
+
 aside {
     flex: 1;
     height: auto;
@@ -102,6 +134,7 @@ aside > section {
     display: flex;
     flex-direction: column;
     height: var(--section-height);
+    padding: 10px 0;
 }
 
 aside > section:hover {
@@ -110,6 +143,8 @@ aside > section:hover {
 
 aside > section > img {
     flex: 5;
+    object-fit: scale-down;
+    max-width: 300px;
 }
 
 aside > section > h3 {
@@ -142,11 +177,19 @@ h1 {
     margin-top: 0;
 }
 
+a {
+    color: var(--tertiary-color);
+}
+
 .text-center {
     text-align: center;
 }
 
 /*Meal Plan Builder Styling*/
+#mealPlanHeader {
+    height: auto;
+}
+
 #mealPlanMain {
     display: flex;
     flex-direction: row;
@@ -158,6 +201,10 @@ h1 {
 
 #mealPlan {
     flex: 1;
+}
+
+#meals {
+    min-height: 200px;
 }
 
 .featured-dish {

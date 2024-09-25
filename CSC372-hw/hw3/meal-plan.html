@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!--
+  Name: Ethan Moore 
+  Date: 09.25.2024
+  CSC 372-01
+
+  This is the page for the meal plan builder. This interactive page allows for users to build a meal plan
+  with meals found on the home page.
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +20,7 @@
         <button id="homeBttn">Home</button>
         <button id="mealPlanBttn">Meal Plan</button>
     </nav>
-    <header>
+    <header id="mealPlanHeader">
         <h1 class="text-center">Meal Plan Builder</h1>
     </header>
     <main id="mealPlanMain">
@@ -20,8 +28,40 @@
             <h3 class="text-center">Featured Dishes</h3>
             <div id="dishesContainer">
                 <div class="featured-dish">
-                    <p><span id="meal1Name">Meal One</span>: <span id="meal1Val">$10.00</span></p>
-                    <button onclick="addMeal(1)">Add</button>
+                    <p><span id="meal1Name">Bone-less/-in Wings</span>: <span id="meal1Val">$10.49</span></p>
+                    <button id="add1">Add</button>
+                </div>
+                <div class="featured-dish">
+                    <p><span id="meal2Name">Mushroom Swiss Burger</span>: <span id="meal2Val">$13.49</span></p>
+                    <button id="add2">Add</button>
+                </div>
+                <div class="featured-dish">
+                    <p><span id="meal3Name">Buffalo Ranch Chicken Wrap</span>: <span id="meal3Val">$11.49</span></p>
+                    <button id="add3">Add</button>
+                </div>
+                <div class="featured-dish">
+                    <p><span id="meal4Name">Chicken Sandwich</span>: <span id="meal4Val">$8.55</span></p>
+                    <button id="add4">Add</button>
+                </div>
+                <div class="featured-dish">
+                    <p><span id="meal5Name">Chicken Nuggets</span>: <span id="meal5Val">$8.55</span></p>
+                    <button id="add5">Add</button>
+                </div>
+                <div class="featured-dish">
+                    <p><span id="meal6Name">Chocolate Chunk Cookie</span>: <span id="meal6Val">$1.65</span></p>
+                    <button id="add6">Add</button>
+                </div>
+                <div class="featured-dish">
+                    <p><span id="meal7Name">Fajita Sub</span>: <span id="meal7Val">$9.50</span></p>
+                    <button id="add7">Add</button>
+                </div>
+                <div class="featured-dish">
+                    <p><span id="meal8Name">Steak & Cheese Pita</span>: <span id="meal8Val">$9.50</span></p>
+                    <button id="add8">Add</button>
+                </div>
+                <div class="featured-dish">
+                    <p><span id="meal9Name">Gyro</span>: <span id="meal9Val">$9.50</span></p>
+                    <button id="add9">Add</button>
                 </div>
             </div>
         </div>
