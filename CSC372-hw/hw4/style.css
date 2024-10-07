@@ -1,0 +1,73 @@
+body {
+    width: 99vw;
+    height: auto;
+    padding: 0;
+    background-image: radial-gradient(darkblue -7%, lightblue 109%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+div {
+    background-color: whitesmoke;
+}
+
+#comContainer {
+    padding: 10px;
+    width: 40%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+#comChoiceContainer {
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+}
+
+#resultsContainer {
+    padding: 10px;
+    width: 90%;
+    height: 20%;
+    border: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+#playerContainer {
+    padding: 10px;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#choiceContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#choiceContainer > img:hover {
+    cursor: pointer;
+}
+
+img.selected {
+    border: 2px solid red;
+    border-radius: 2px;
+    overflow: hidden;
+}
