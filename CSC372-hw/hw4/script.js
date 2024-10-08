@@ -110,6 +110,10 @@ function shuffleChoices() {
 
 function changeComSelection() {
     let newCoiceNum = Math.floor(Math.random() * 3);
-    comChoiceRef.setAttribute("choice", CHOICES[newCoiceNum]);
-    comChoiceRef.setAttribute("src", choiceRefs.item(newCoiceNum).getAttribute("src"));
+    comChoiceRef.style.animation = "com-choosing 250ms";
+    setTimeout(() => {comChoiceRef.style.animation = ""}, 250);
+    setTimeout(() => {
+        comChoiceRef.setAttribute("choice", CHOICES[newCoiceNum]);
+        comChoiceRef.setAttribute("src", choiceRefs.item(newCoiceNum).getAttribute("src"));
+    }, 100);
 }
