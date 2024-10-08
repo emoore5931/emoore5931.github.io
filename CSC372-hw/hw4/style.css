@@ -1,10 +1,21 @@
+/*
+  Name: Ethan Moore
+  Date: 10.08.2024
+  CSC 372-01
+
+  This is the index.html homepage for the homework 4. 
+  This is a rock paper scissors game where the user is able to pick either rock, paper, or scissors. Once the user picks, the computer
+  randomly choose and the outcome of the game is decided. Once the user picks a new option another game is started.
+*/
+
 body {
     width: 99vw;
     height: auto;
     padding: 0;
-    background-image: radial-gradient(darkblue -7%, lightblue 109%);
+    background-image: radial-gradient(darkblue -7%, rgb(104, 104, 214) 109%);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1, h2 {
@@ -60,14 +71,23 @@ div {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    padding: 20px;
 }
 
-#choiceContainer > img:hover {
+#choiceContainer > img {
+    transition: all 50ms;
+}
+
+#choiceContainer > img:hover:not(.selected) {
     cursor: pointer;
+    transform: scale(1.15);
+    border: 2px solid gray;
+    border-radius: 2px;
 }
 
 img.selected {
     border: 2px solid red;
     border-radius: 2px;
     overflow: hidden;
+    transform: scale(1.25);
 }
