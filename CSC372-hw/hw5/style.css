@@ -1,0 +1,106 @@
+:root {
+    --body-background: rgb(36, 36, 36);
+    --body-text: rgb(222, 222, 222);
+
+    --card-background: rgb(240, 240, 240);
+    --card-text: rgb(52, 52, 52);
+    --card-header: rgb(5, 10, 203);
+    --card-header-hover: rgb(70, 70, 203);
+    --card-icon: rgb(140, 180, 203);
+}
+
+body {
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    background-color: var(--body-background);
+    color: var(--body-text);
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+header > h1 {
+    text-align: center;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    background-color: rgb(47, 47, 47);
+    padding: 12px;
+    border-radius: 4px;
+}
+
+svg {
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: text-bottom;
+}
+
+span.heavier-emph {
+    font-weight: 410;
+    font-size: 1.01em;
+}
+
+div.card-container {
+    display: flex;
+    padding: 2px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+div.github-card {
+    background-color: var(--card-background);
+    color: var(--card-text);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 4px;
+    height: 400px;
+    min-width: 200px;
+    max-width: 350px;
+    border-radius: 2px;
+    overflow: hidden;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+div.github-card > p {
+    margin: 0;
+}
+
+.github-card-head {
+    display: flex;
+    gap: 15px;
+}
+
+.github-card-head > svg {
+    height: 60px;
+    width: 60px;
+}
+
+.github-card-head > div > h3 {
+    color: var(--card-header);
+    margin: 0;
+    transition: all 50ms;
+}
+
+.github-card-head > div > h3:hover {
+    cursor: pointer;
+    color: var(--card-header-hover);
+}
+
+.github-card-head-info {
+    display: flex;
+    gap: 20px;
+}
+
+.github-card-head-info > div > svg {
+    color: var(--card-icon);
+}
+
+.github-card-desc {
+    min-height: 150px;
+    max-height: 200px;
+    overflow-y: auto;
+}
