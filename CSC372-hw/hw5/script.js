@@ -7,20 +7,15 @@ const GAL_ID_REF = document.getElementById("galleryUserID");
 let requestUser = DEFAULT_USER;
 GAL_ID_REF.textContent = requestUser;
 
-//Test run
-let sampleCard = new GithubCard(
-    "Example Card",
-    "This is a sample description for a sample card.",
-    9999,
-    9999,
-    "Javascript, HTML, CSS",
-    "01/01/01",
-    "01/01/01",
-    "https://www.google.com"
-);
-
-for (let i=0; i <= 10; i++)
-    displayCard(sampleCard, document.getElementById("container1"));
+getRepos(requestUser).then((repoArr) => {
+    let cards = [];
+    repoArr.forEach((repo) => {
+        cards.push(repoToCard(repo));
+    });
+    cards.forEach((card) => {
+        displayCard(card, document.getElementById("container1"));
+    });
+})
 
 /**
  * 
@@ -63,4 +58,23 @@ function displayCard(githubCard, containerRef) {
     card.querySelector(".github-card-create-date").textContent =  githubCard.creationDate;
 
     containerRef.appendChild(card);
+}
+
+async function getRepos(ownerName) {
+    const repoArr = [];
+
+    fetch(FETCH_REPO_URI.replace("$", ownerName), {
+        method: "GET"
+    })
+    .then((response) => response.json()).then((data) => {
+        data.forEach((repo) => {
+            repoArr.push(repo);
+        })
+    });
+
+    return repoArr;
+}
+
+function repoToCard(repo) {
+    return new GithubCard(repo.name, repo.description, repo.watchers_count, 0, repo.language, repo.created_at, repo.updated_at, repo.html_url)
 }
