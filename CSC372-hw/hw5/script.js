@@ -97,7 +97,6 @@ async function repoToCard(repo) {
     (repo.description == null || repo.description.length == 0) ? description = "No description" : description = repo.description;
     
     let language;
-    //BUG HERE
     (typeof repo.language === 'null' || repo.language == null || repo.language.length == 0) ? language = "N/A" : language = repo.language;
 
     const createDate = new Date(repo.created_at).toLocaleString();
