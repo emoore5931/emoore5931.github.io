@@ -12,6 +12,7 @@ const FETCH_REPO_URI = "https://api.github.com/users/$/repos";
 const DEFAULT_USER = "emoore5931";
 const CARD_TEMPLATE = document.querySelector("#githubCard");
 const GAL_ID_REF = document.getElementById("galleryUserID");
+const USER_ID_INPUT_REF = document.getElementById("userIDInput");
 
 let requestUser = DEFAULT_USER;
 GAL_ID_REF.textContent = requestUser;
@@ -23,6 +24,31 @@ getRepos(requestUser).then((repoArr) => {
         });
     });
 }, () => {console.error("Failed to get repos")});
+
+document.getElementById("userIDSubmit").addEventListener("click", newGallery);
+
+function newGallery() {
+    const containerRef = document.getElementById("container1");
+    const userID = USER_ID_INPUT_REF.value;
+
+    //reset elements
+    USER_ID_INPUT_REF.value = "";
+    containerRef.innerHTML = "";
+
+    if (userID.length > 0) {
+        GAL_ID_REF.textContent = userID;
+
+        getRepos(userID).then((repoArr) => {
+            repoArr.forEach((repo) => {
+                repoToCard(repo).then((card) => {
+                    displayCard(card, containerRef);
+                });
+            });
+        }, () => {console.error("Failed to get repos")});
+    } else {
+        GAL_ID_REF.textContent = "Enter a valid GitHub username to view owned repositories.";
+    }
+}
 
 /**
  * Object that contains GitHub repo data to be displayed.

@@ -58,6 +58,12 @@ div.card-container {
     justify-content: center;
 }
 
+.gallery-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 div.github-card {
     background-color: var(--card-background);
     color: var(--card-text);
