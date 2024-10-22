@@ -98,7 +98,7 @@ async function repoToCard(repo) {
     
     let language;
     //BUG HERE
-    (typeof repo.language === 'null' || repo.language == null || repo.language.length == 0) ? lanugage = "N/A" : language = repo.language;
+    (typeof repo.language === 'null' || repo.language == null || repo.language.length == 0) ? language = "N/A" : language = repo.language;
 
     const createDate = new Date(repo.created_at).toLocaleString();
     const updateDate = new Date(repo.updated_at).toLocaleString();
