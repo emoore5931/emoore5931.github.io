@@ -58,7 +58,7 @@ function displayCard(githubCard, containerRef) {
     repoNameRef.textContent = githubCard.name;
     repoNameRef.addEventListener("click", () => {window.location.href = githubCard.repoLink});
     card.querySelector(".github-card-num-watchers").textContent = githubCard.numWatchers;
-    card.querySelector(".github-card-num-commits").textContent = githubCard.numWatchers;
+    card.querySelector(".github-card-num-commits").textContent = githubCard.numCommits;
     card.querySelector(".github-card-desc").textContent = githubCard.description;
     card.querySelector(".github-card-langs").textContent = githubCard.languages;
     card.querySelector(".github-card-update-date").textContent = githubCard.lastUpdated;
@@ -97,31 +97,26 @@ async function repoToCard(repo) {
     (repo.description == null || repo.description.length == 0) ? description = "No description" : description = repo.description;
     
     let language;
-    (typeof repo.language === 'null' || repo.language == null || repo.language.length == 0) ? language = "N/A" : language = repo.language;
+    (repo.language == null || repo.language.length == 0) ? language = "N/A" : language = repo.language;
 
     const createDate = new Date(repo.created_at).toLocaleString();
     const updateDate = new Date(repo.updated_at).toLocaleString();
-    const numCommits = await getCommitCount(repo.commits_url);
 
-    console.log(numCommits);
-
-    return new GithubCard(repo.name, description, repo.watchers_count, numCommits, language, createDate, updateDate, repo.html_url)
+    return new GithubCard(repo.name, description, repo.watchers_count, await getCommitCount(repo.commits_url), language, createDate, updateDate, repo.html_url);
 }
 
 /**
  * Helper method that fetches the commit count for {@link repoToCard}
  * @param {string} commitURL the URL pointing to GitHub API to pull commit data
- * @returns {number} the resulting number of commits
+ * @returns {*} the resulting number of commits
  */
-async function getCommitCount(commitURL) {
-    let numCommits = await fetch(commitURL.replace("{/sha}", ""), {
+function getCommitCount(commitURL) {
+    return fetch(commitURL.replace("{/sha}", ""), {
         method: "GET"
     })
     .then((response) => {
-        response.json().then((commitArr) => {
+        return response.json().then((commitArr) => {
             return commitArr.length;
         })
     });
-    
-    return numCommits;
 }
